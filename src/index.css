@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+span {
+  color:tan
+}
