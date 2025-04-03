@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 
+{/* start page */}
 export default function Start() {
     return (
         <div className='min-h-screen flex flex-col gap-10 items-center 

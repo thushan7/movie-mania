@@ -5,6 +5,7 @@ import List from './components/List'
 import {generateList} from './utils/functions'
 
 function App() {
+  {/* generated list of movies based on user's filters */}
   const [list, setList] = useState(null)
   const [genre, setGenre] = useState()
   const [rating, setRating] = useState(null)

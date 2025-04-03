@@ -1,5 +1,6 @@
 import React from 'react'
 
+{/* each movie in the generated list of movies at the end, output the movie name which is passed in as a prop */}
 export default function Movie(props) {
     const {movie} = props
 

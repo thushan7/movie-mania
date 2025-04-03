@@ -1,5 +1,6 @@
 import React from 'react'
 
+{/* general function for all buttons on the website */}
 export default function Button(props) {
     const {text, func} = props
     return (

@@ -1,5 +1,6 @@
 import {MOVIES} from './data'
 
+//goes through entire movie database and returns the movies that match the user's filters
 export function generateList(args) {
     const {genre, rating, length} = args
 

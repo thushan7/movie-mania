@@ -17,8 +17,10 @@ function Header(props) {
     )
 }
 
+{/* core of the program, inputs user selections and generates the list of movies */}
 export default function Generator(props) {
     const {genre, setGenre, rating, setRating, length, setLength, updateList} = props
+    {/* whether or not to display drop down menu of movie age ratings, depends on if user clicks the menu or not */}
     const [showOptions, setOptions] = useState(false)
 
     function toggleOptions() {
@@ -27,6 +29,7 @@ export default function Generator(props) {
 
     return (
         <SectionWrapper id={'generator'} header={"Find The Movie For You"}>
+            {/* user picks a genre by clicking the button */}
             <Header number={'01'} title={'Select a Genre'}/>
             <div className='flex gap-20 justify-center'>
                 {Object.keys(GENRES).map((gen, genIndex) => {
@@ -41,6 +44,7 @@ export default function Generator(props) {
                 })}
             </div>
 
+            {/* user picks an age rating by selecting from the dropdown menu*/}
             <Header number={'02'} title={'Select an Audience'}/>
             <div className='bg-amber-100 rounded flex flex-col hover:bg-amber-200 hover:cursor-pointer py-1'>
                 <button onClick={toggleOptions} className='relative flex items-center justify-center'>
@@ -65,6 +69,7 @@ export default function Generator(props) {
                 )}
             </div>
 
+            {/* user picks a duration by clicking the button*/}
             <Header number={'03'} title={'Select a Duration'}/>
             <div className='flex gap-20 justify-center'>
                 {Object.keys(LENGTHS).map((len, lenIndex) => {
@@ -79,7 +84,10 @@ export default function Generator(props) {
                 })}
             </div>
 
+            {/* just added this div for some vertical spacing on the page */}
             <div></div>
+
+            {/* after user makes their selections, generate the movie list, only works if all 3 filters are applied */}
             <Button func={updateList} text={"Find Movies"}></Button>
         </SectionWrapper>
     )

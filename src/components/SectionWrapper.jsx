@@ -1,5 +1,6 @@
 import React from 'react'
 
+{/* function created to make it easier to create multiple sections without repeating code */}
 export default function SectionWrapper(props) {
     const {children, header, id} = props
     return (
