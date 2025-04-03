@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default function SectionWrapper(props) {
-    const {children, header} = props
+    const {children, header, id} = props
     return (
-        <section className='min-h-screen flex flex-col gap-10'>
+        <section id={id} className='min-h-screen flex flex-col gap-10'>
             <div className='bg-stone-900 py-8 flex flex-col
             gap-2 justify-center items-center'>
                 <p className='text-4xl font-semibold'>{header}</p>

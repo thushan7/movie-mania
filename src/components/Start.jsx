@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 export default function Start() {
     return (
@@ -11,9 +12,9 @@ export default function Start() {
                 Having trouble finding a movie? Use our <span>customizable filters</span> to tell us exactly what you're in 
                 the mood for, and we'll deliver a curated <span>selection of films</span> just for you!
             </p>
-            <button className='px-5 py-3 rounded-md bg-amber-100 hover:bg-amber-200 hover:cursor-pointer'>
-                <p className='font-bold'>Get Started</p>
-            </button>
+            <Button func={() => {
+                window.location.href = '#generator'
+            }} text={"Get Started"}></Button>
         </div>
     )
 }
